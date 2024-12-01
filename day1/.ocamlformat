@@ -1,0 +1,9 @@
+version-check = false
+profile = janestreet
+
+break-cases = fit
+margin = 80
+wrap-comments = false
+
+assignment-operator = end-line
+line-endings = lf
