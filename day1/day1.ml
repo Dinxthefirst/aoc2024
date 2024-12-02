@@ -1,13 +1,14 @@
 let first list = List.hd list
 let rec last = function [] -> assert false | [ x ] -> x | _ :: tl -> last tl
 
-let lines f =
-  let contents = In_channel.with_open_bin f In_channel.input_all in
-  String.split_on_char '\n' contents
-;;
-
 let split_on_spaces line =
   line |> String.split_on_char ' ' |> List.filter (fun x -> x <> "")
+;;
+
+let input f =
+  let contents = In_channel.with_open_bin f In_channel.input_all in
+  let lines = String.split_on_char '\n' contents in
+  List.map split_on_spaces lines
 ;;
 
 let split_list list =
