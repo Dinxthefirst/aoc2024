@@ -1,3 +1,5 @@
 (executable
  (name day5)
- (public_name day5))
+ (public_name day5)
+ (flags
+  (:standard -w -32)))
